@@ -1,4 +1,8 @@
 package model;
 
-public class RiskLevel {
+public enum RiskLevel {
+    LOW,
+    MEDIUM,
+    HIGH,
+    CRITICAL
 }

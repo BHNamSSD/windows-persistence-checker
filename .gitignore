@@ -2,13 +2,13 @@
 .idea/
 *.iml
 
-# Build
+# Java build output
 out/
 target/
 
-# Java
+# Compiled Java
 *.class
 
-# OS
+# OS files
 .DS_Store
 Thumbs.db

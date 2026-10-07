@@ -1,4 +1,10 @@
 package scanner;
 
-public class PersistenceScanner {
+import model.PersistenceEntry;
+
+import java.util.List;
+
+public interface PersistenceScanner {
+
+    List<PersistenceEntry> scan();
 }
