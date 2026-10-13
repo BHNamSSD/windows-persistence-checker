@@ -5,6 +5,9 @@ import scanner.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import report.JsonReportWriter;
+import java.nio.file.Path;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -48,6 +51,22 @@ public class Main {
         }
 
         printResults(results);
+
+        try {
+            JsonReportWriter writer = new JsonReportWriter();
+            Path reportPath = writer.writeReport(results);
+
+            System.out.println(
+                    "[+] JSON report saved: "
+                            + reportPath.toAbsolutePath()
+            );
+
+        } catch (Exception e) {
+            System.err.println(
+                    "[ERROR] Cannot write JSON report: "
+                            + e.getMessage()
+            );
+        }
     }
 
     private static void printBanner() {

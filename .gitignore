@@ -5,6 +5,7 @@
 # Java build output
 out/
 target/
+reports/
 
 # Compiled Java
 *.class
